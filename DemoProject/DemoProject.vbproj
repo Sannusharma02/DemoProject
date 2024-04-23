@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="homepage.aspx" />
+    <Content Include="homepage1.aspx" />
     <Content Include="images\Karl-Anthony.jpg" />
     <Content Include="images\Proxyfox.jpg" />
     <Content Include="images\push.jpg" />
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="homepage.aspx.vb">
       <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="homepage1.aspx.designer.vb">
+      <DependentUpon>homepage1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homepage1.aspx.vb">
+      <DependentUpon>homepage1.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="loginpage.aspx.designer.vb">
