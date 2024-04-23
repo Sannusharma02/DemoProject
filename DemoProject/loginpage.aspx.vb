@@ -23,10 +23,10 @@ Public Class loginpage
         Dim reader As SqlDataReader = objcmd.ExecuteReader
         If reader.Read Then
             MsgBox("Login Success")
-            Response.Redirect(Log)
-
+            Response.Redirect("homepage.aspx")
+        Else
+            MsgBox("Invalid Username/Password")
         End If
-
     End Sub
     Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 

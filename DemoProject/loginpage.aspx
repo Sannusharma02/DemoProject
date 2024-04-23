@@ -14,11 +14,10 @@
             background-color: #7efff5;
             width: 500px;
             height: 416px;
-            margin-top: 128px;
+            margin-top: 120px;
             margin-left: auto;
             margin-right: auto;
         }
-
         .container{
             margin-left: 50px;
             height: 282px;
@@ -43,10 +42,11 @@
             <br />
             <br />
             <asp:Button ID="Button2" runat="server" Text="CANCEL" BackColor="#990000" BorderColor="#FFFF66" Height="36px" Width="402px"/>
-            <br />
-            <br />
+            &nbsp;<br />
+            &nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label1" runat="server" Text="Don't have an account ?"></asp:Label>
-            <br />
+            &nbsp;<br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:HyperLink ID="HyperLink1" href="signup.aspx" runat="server">SIGN UP</asp:HyperLink>
