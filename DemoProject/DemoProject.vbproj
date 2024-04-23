@@ -96,6 +96,7 @@
     <Content Include="images\Karl-Anthony.jpg" />
     <Content Include="images\Proxyfox.jpg" />
     <Content Include="images\push.jpg" />
+    <Content Include="loginpage.aspx" />
     <Content Include="signup.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -106,6 +107,13 @@
     <Compile Include="homepage.aspx.vb">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="loginpage.aspx.designer.vb">
+      <DependentUpon>loginpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginpage.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>loginpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
