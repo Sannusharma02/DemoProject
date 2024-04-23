@@ -18,6 +18,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .container{
             margin-left: 50px;
             height: 282px;
