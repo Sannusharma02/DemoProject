@@ -99,6 +99,7 @@
     <Content Include="images\Proxyfox.jpg" />
     <Content Include="images\push.jpg" />
     <Content Include="images\transparent-logo-contracting.png" />
+    <Content Include="insert.aspx" />
     <Content Include="loginpage.aspx" />
     <Content Include="signup.aspx" />
     <Content Include="Web.config" />
@@ -124,6 +125,13 @@
     <Compile Include="homepage1.aspx.vb">
       <DependentUpon>homepage1.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="insert.aspx.designer.vb">
+      <DependentUpon>insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="insert.aspx.vb">
+      <DependentUpon>insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="loginpage.aspx.designer.vb">
       <DependentUpon>loginpage.aspx</DependentUpon>
