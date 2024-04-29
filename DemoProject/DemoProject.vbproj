@@ -92,6 +92,10 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DemoProject.mdf" />
+    <Content Include="App_Data\DemoProject_log.ldf">
+      <DependentUpon>DemoProject.mdf</DependentUpon>
+    </Content>
     <Content Include="dropdownmenu.aspx" />
     <Content Include="homepage.aspx" />
     <Content Include="homepage1.aspx" />
@@ -102,6 +106,7 @@
     <Content Include="insert.aspx" />
     <Content Include="loginpage.aspx" />
     <Content Include="signup.aspx" />
+    <Content Include="Validation.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +169,13 @@
     </Compile>
     <Compile Include="signup.aspx.vb">
       <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Validation.aspx.designer.vb">
+      <DependentUpon>Validation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.aspx.vb">
+      <DependentUpon>Validation.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

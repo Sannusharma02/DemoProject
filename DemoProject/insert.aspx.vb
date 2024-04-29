@@ -1,5 +1,4 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Data.SqlClient.SqlException
 
 Public Class insert
     Inherits System.Web.UI.Page
@@ -92,9 +91,78 @@ Public Class insert
             End If
 
         Else
-                MsgBox("Data not Available")
+            MsgBox("Data not Available")
         End If
         con.Close()
 
+    End Sub
+
+    Protected Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim con As New SqlConnection
+        Dim cmd As New SqlCommand
+
+        con.ConnectionString = "Data Source=SANNUSHARMA02\SQLEXPRESS;Initial Catalog=DemoProject;Integrated Security=True"
+        cmd.Connection = con
+        con.Open()
+        cmd.CommandText = "update emp set fname='" & TextBox1.Text & "', lname='" & TextBox2.Text & "', mobile='" & TextBox3.Text & "', age='" & TextBox4.Text & "', fathername='" & TextBox5.Text & "', email='" & TextBox6.Text & "', gender='" & DropDownList1.Text & "' where id='" & searchBox.Text & "'"
+
+        cmd.ExecuteNonQuery()
+        MsgBox("Record Successfully Updated...", MsgBoxStyle.Information, " Data Saved Successfully")
+        emp_Id.Text = ""
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+        TextBox6.Text = ""
+        DropDownList1.Text = ""
+    End Sub
+
+    Protected Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim con As New SqlConnection
+        Dim cmd As New SqlCommand
+
+        con.ConnectionString = "Data Source=SANNUSHARMA02\SQLEXPRESS;Initial Catalog=DemoProject;Integrated Security=True"
+        cmd.Connection = con
+        con.Open()
+
+        cmd.CommandText = "delete from emp where id ='" & searchBox.Text & "' "
+        cmd.ExecuteNonQuery()
+        MsgBox("Record Deleted Successfully", MsgBoxStyle.Information, "Data Deleted Successfully")
+        emp_Id.Text = ""
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+        TextBox6.Text = ""
+        DropDownList1.Text = ""
+
+    End Sub
+
+    Protected Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim con As New SqlConnection
+        Dim cmd As New SqlCommand
+
+        con.ConnectionString = "Data Source=SANNUSHARMA02\SQLEXPRESS;Initial Catalog=DemoProject;Integrated Security=True"
+        con.Open()
+
+        cmd.Connection = con
+        cmd.CommandText = " Select * from emp"
+
+        GridView1.DataSource = cmd.ExecuteReader
+        GridView1.DataBind()
+    End Sub
+
+    Protected Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        emp_Id.Text = ""
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+        TextBox6.Text = ""
+        DropDownList1.Text = ""
+        gender = ""
     End Sub
 End Class
