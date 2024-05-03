@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 100%;
+            width: 122%;
         }
         .auto-style2 {
             height: 23px;
@@ -24,25 +24,25 @@
             width: 162px;
         }
         .auto-style8 {
-            width: 277px;
+            width: 394px;
         }
         .auto-style9 {
             height: 23px;
-            width: 277px;
+            width: 394px;
         }
         .auto-style10 {
             margin-left: 0px;
         }
     </style>
 </head>
-<body>
+<body style="margin-right: 975px">
 
     <form id="form1" runat="server">
         <div>
             <table class="auto-style1" style="text-align: center;" border="1">
                 <tr>
                     <td colspan="3" >
-                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Overline="False" Font-Size="20pt" Text="TextBox Validation using ASP.Net"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Overline="False" Font-Size="20pt" Text="Form Validation using ASP.Net"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -63,7 +63,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style8">
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="username" ErrorMessage="Enter Only Character" ValidationExpression="^[a-zA-Z\s]{6,30}$"></asp:RegularExpressionValidator>
+                    </td>
                     <td class="auto-style7">&nbsp;</td>
                 </tr>
                 <tr>
@@ -79,7 +81,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style8">
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="email" ErrorMessage="Invalid Email Id" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    </td>
                     <td class="auto-style7">&nbsp;</td>
                 </tr>
                 <tr>
@@ -111,7 +115,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style8">
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="password" ControlToValidate="confirmPassword" ErrorMessage="Password &amp; Confirm password mismatch"></asp:CompareValidator>
+                    </td>
                     <td class="auto-style7">&nbsp;</td>
                 </tr>
                 <tr>
