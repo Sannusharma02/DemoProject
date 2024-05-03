@@ -64,7 +64,7 @@
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style8">
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="username" ErrorMessage="Enter Only Character" ValidationExpression="^[a-zA-Z\s]{6,30}$"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="username" ErrorMessage="Enter Only Characters" ValidationExpression="[a-zA-Z]"></asp:RegularExpressionValidator>
                     </td>
                     <td class="auto-style7">&nbsp;</td>
                 </tr>
@@ -125,7 +125,7 @@
                         <asp:Label ID="Label6" runat="server" Font-Bold="True" Text="Mobile Number"></asp:Label>
                     </td>
                     <td class="auto-style9">
-                        <asp:TextBox ID="mobileNumber" runat="server" BorderColor="Black" Width="182px"></asp:TextBox>
+                        <asp:TextBox ID="mobileNumber" runat="server" BorderColor="Black" Width="182px" MaxLength="10"></asp:TextBox>
                     </td>
                     <td class="auto-style2">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="mobileNumber" ErrorMessage="Please Enter Mobile Number"></asp:RequiredFieldValidator>
@@ -133,7 +133,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style8">
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="mobileNumber" ErrorMessage="Enter Correct Mobile Number" ValidationExpression="^([7-9]{1})([0-9]{9})$"></asp:RegularExpressionValidator>
+                    </td>
                     <td class="auto-style7">&nbsp;</td>
                 </tr>
                 <tr>
@@ -149,7 +151,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style8">
+                        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="Age" ErrorMessage="Age&gt;= 18 || Age&lt;= 30" MaximumValue="30" MinimumValue="18"></asp:RangeValidator>
+                    </td>
                     <td class="auto-style7">&nbsp;</td>
                 </tr>
                 <tr>
@@ -157,7 +161,7 @@
                         <asp:Label ID="Label8" runat="server" Font-Bold="True" Text="Pincode"></asp:Label>
                     </td>
                     <td class="auto-style8">
-                        <asp:TextBox ID="pincode" runat="server" BorderColor="Black" Width="182px"></asp:TextBox>
+                        <asp:TextBox ID="pincode" runat="server" BorderColor="Black" Width="182px" MaxLength="6"></asp:TextBox>
                     </td>
                     <td class="auto-style7">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="pincode" ErrorMessage="Please Enter The Pincode"></asp:RequiredFieldValidator>
@@ -165,7 +169,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style8">
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="pincode" ErrorMessage="Enter Valid Pin-Code" ValidationExpression="^([0-9]{6})$"></asp:RegularExpressionValidator>
+                    </td>
                     <td class="auto-style7">&nbsp;</td>
                 </tr>
                 <tr>
