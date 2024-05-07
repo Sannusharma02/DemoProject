@@ -176,7 +176,7 @@
     </Compile>
     <Compile Include="Validation.aspx.vb">
       <DependentUpon>Validation.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
